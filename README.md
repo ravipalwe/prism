@@ -2,7 +2,7 @@
 
 An AI agent skill that gives Claude (and other AI coding assistants) the ability to generate professional UX research deliverables grounded in **industry-standard UX research methodology**.
 
-Built by **[Ravi Palwe](mailto:ravi.palwe@gmail.com)** — 19+ years in Product Design leadership at Bank of America, Capital One, and Capgemini.
+Built by **[Ravi Palwe](mailto:ravi.palwe@gmail.com)** — 19+ years in Product Design leadership in Financial Services.
 
 ## What It Does
 
@@ -102,4 +102,5 @@ PRISM adds modest cost (~33 seconds, ~8K tokens) for a **64% quality improvement
 ## License
 
 MIT
+# prism
 # prism
