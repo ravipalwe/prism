@@ -1,10 +1,12 @@
 # PRISM — People Research & Insight System for Makers
 
-An AI agent skill that gives Claude (and other AI coding assistants) the ability to generate professional UX research deliverables grounded in **industry-standard UX research methodology**.
+An AI agent skill with two modules: **UX Research** and **UI Design**. From research insight to design specification — grounded in industry-standard methodology.
 
 Built by **[Ravi Palwe](mailto:ravi.palwe@gmail.com)** — 19+ years in Product Design leadership in Financial Services.
 
 ## What It Does
+
+### Module 1: UX Research
 
 | Deliverable | What You Get |
 |---|---|
@@ -13,9 +15,20 @@ Built by **[Ravi Palwe](mailto:ravi.palwe@gmail.com)** — 19+ years in Product 
 | **Interview Synthesis** | Cross-participant findings with evidence strength ratings, direct quotes, themes, and recommendations |
 | **Usability Test Plans** | Complete plans with research questions, task scenarios, metrics, participant criteria, and timelines |
 
+### Module 2: UI Design
+
+| Deliverable | What You Get |
+|---|---|
+| **Design Philosophy** | Named aesthetic direction with vision, principles, emotional targets, and anti-patterns |
+| **Design Tokens** | Complete color, typography, spacing, elevation, radius, and motion token system |
+| **Component Specs** | Anatomy, states, behavior, responsiveness, accessibility, and Do/Don't for every component |
+| **Layout System** | Grid, breakpoints, page templates, content regions, navigation patterns, and empty states |
+| **Interaction Spec** | Motion principles, timing system, feedback patterns, transitions, gestures, and loading states |
+| **Canvas Artifacts** | Visual design expressions as .pdf or .png — posters, infographics, brand identity pieces |
+
 ### Financial Services Layer (Optional)
 
-Built-in support for fintech, banking, payments, insurance, and wealth management. Adds trust signals, compliance friction (KYC, AML, PCI-DSS), financial anxiety analysis, and regulatory touchpoints to every deliverable.
+Built-in support for fintech, banking, payments, insurance, and wealth management. Adds trust signals, compliance friction (KYC, AML, PCI-DSS), financial anxiety analysis, trust-specific design tokens, financial component patterns, and regulatory touchpoints to every deliverable.
 
 ## Install
 
@@ -39,41 +52,57 @@ Add the path to `SKILL.md` to your `.claude/settings.json`:
 
 ```
 prism/
-├── SKILL.md                          # Main skill instructions
-├── package.json                      # npm metadata
-├── LICENSE.txt                       # MIT license
-├── references/                       # Detailed generation guides
-│   ├── PERSONA-GUIDE.md              # Persona template & research methodology
-│   ├── JOURNEY-MAP-GUIDE.md          # Journey map template & guidelines
-│   ├── SYNTHESIS-GUIDE.md            # Interview synthesis methodology
-│   ├── TEST-PLAN-GUIDE.md            # Usability test plan template
-│   ├── FINSERV-LAYER.md              # Financial services additions
-│   └── QUALITY-CHECKLIST.md          # Pre-delivery validation checks
+├── SKILL.md                              # Main skill instructions (both modules)
+├── package.json                          # npm metadata
+├── LICENSE.txt                           # MIT license
+├── references/                           # Detailed generation guides
+│   ├── PERSONA-GUIDE.md                  # Persona template & research methodology
+│   ├── JOURNEY-MAP-GUIDE.md              # Journey map template & guidelines
+│   ├── SYNTHESIS-GUIDE.md                # Interview synthesis methodology
+│   ├── TEST-PLAN-GUIDE.md               # Usability test plan template
+│   ├── PHILOSOPHY-GUIDE.md               # Design philosophy methodology
+│   ├── TOKEN-GUIDE.md                    # Design token system template
+│   ├── COMPONENT-GUIDE.md                # Component specification template
+│   ├── LAYOUT-GUIDE.md                   # Layout system template
+│   ├── INTERACTION-GUIDE.md              # Interaction & motion spec template
+│   ├── CANVAS-GUIDE.md                   # Visual artifact creation guide
+│   ├── FINSERV-LAYER.md                  # Financial services research additions
+│   ├── FINSERV-UI-LAYER.md               # Financial services UI design additions
+│   └── QUALITY-CHECKLIST.md              # Pre-delivery validation checks
 ├── scripts/
-│   └── validate-output.js            # Output validator (zero dependencies)
+│   └── validate-output.js                # Output validator (zero dependencies)
 └── assets/
-    └── research-brief-template.json  # Structured input schema
+    └── research-brief-template.json      # Structured input schema
 ```
 
 ## Usage Examples
 
 Just describe what you need in natural language:
 
+**Research:**
 - *"Create user personas for a mobile banking app targeting Gen Z users"*
 - *"I have interview notes from 6 users about our onboarding flow — synthesize them"*
-- *"Write a usability test plan for our new peer-to-peer payments feature, we launch in 6 weeks"*
+- *"Write a usability test plan for our new peer-to-peer payments feature"*
 - *"Map the customer journey for opening a brokerage account, include the financial services layer"*
 
-The skill automatically identifies which deliverable you need, classifies your input fidelity (raw data vs. brief), and follows the relevant research template.
+**Design:**
+- *"Create a design system for a mobile banking app — calm, trustworthy, professional"*
+- *"I need component specs for a payment confirmation flow"*
+- *"Design tokens for a wealth management dashboard — include the financial services layer"*
+- *"Generate a layout system for an insurance comparison app"*
 
-## Validate Outputs
+The skill identifies which module and deliverable you need, classifies your input fidelity, and follows the relevant template.
 
-```bash
-node scripts/validate-output.js outputs/personas.md persona
-node scripts/validate-output.js outputs/interview-synthesis.md synthesis
-node scripts/validate-output.js outputs/usability-test-plan.md test-plan
-node scripts/validate-output.js outputs/journey-map-maya.md journey-map
-```
+## Cross-Module Flow
+
+Research deliverables feed design deliverables:
+
+| Research Output | Feeds Into |
+|---|---|
+| Personas | Emotional targets in design philosophy, accessibility personas |
+| Journey Maps | Key moment identification, state design, flow prioritization |
+| Interview Synthesis | Pain point → design solution mapping |
+| Usability Test Plans | Component testing criteria, interaction success metrics |
 
 ## Supported Platforms
 
@@ -102,5 +131,4 @@ PRISM adds modest cost (~33 seconds, ~8K tokens) for a **64% quality improvement
 ## License
 
 MIT
-# prism
 # prism
