@@ -129,6 +129,5 @@ Tested across 3 eval scenarios (personas, interview synthesis, usability test pl
 PRISM adds modest cost (~33 seconds, ~8K tokens) for a **64% quality improvement** on research methodology compliance, evidence-based structure, and actionable recommendations.
 
 ## License
-
 MIT
-# prism
+
