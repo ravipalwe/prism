@@ -31,7 +31,6 @@ One plain-language prompt in, a research-backed deliverable out. Two modules: **
 
 | Persona | Journey Map | Design Tokens | Canvas Artifact |
 | :-----: | :---------: | :-----------: | :-------------: |
-| ![Persona](assets/sample-persona.png) | ![Journey map](assets/sample-journey.png) | ![Design tokens](assets/sample-tokens.png) | ![Canvas artifact](assets/sample-canvas.png) |
 
 ---
 
